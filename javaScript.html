@@ -3,40 +3,91 @@
 <head>
     <meta charset="utf-8" />
     <title>WEB1 - Practice</title>
+    <style>
+        body {
+            margin:0;
+        }
+        .active {
+            color: grey;
+        }
+        #personal {
+            color: red 
+        }
+        a {
+            color: black;
+            text-decoration:none;
+        }
+        h1 {
+            font-size:45px;
+            text-align:center;
+            border-bottom:1px solid grey;
+            margin:0;
+            padding:20px;
+        }
+        #grid ol{
+            border-right:1px solid grey;
+            width:100px;
+            margin:0;
+            padding:20px;
+            margin-left:5px;
+            padding-left:33px;
+        }
+        #grid{
+            display:grid;
+            grid-template-columns:150px 1fr;
+        }
+        #grid #article{
+            padding-left:33px
+        }
+    </style>
 </head>
 <body>
     <h1>
         <a href="index.html" title="WEB1">
-            <font color="red">WEB1</font>
+            WEB1
         </a>
     </h1>
-    <p>
-        <ol>
-            <li>
-                <a href="html.html" title="html">
-                    <font color="red">html</font>
-                </a>
-            </li>
-            <li>
-                <a href="css.html" title="css">
-                    <font color="red">css</font>
-                </a>
-            </li>
-            <li>
-                <a href="javaScript.html" title="javaScript">
-                    <font color="red">javaScript</font>
-                </a>
-            </li>
-        </ol>
-    </p>
-    <h2>JAVASCRIPT</h2>
-    <p>
-         JavaScript,often abbreviated as JS, is a high-level, interpreted programming language. It is a language
-        which is also characterized as dynamic, weakly typed, prototype-based and multi-paradigm. Alongside HTML and CSS, JavaScript
-        is one of the three core technologies of the World Wide Web.JavaScript enables interactive web pages and thus is an essential
-        part of web applications. The vast majority of websites use it,and all major web browsers have a dedicated JavaScript
-        engine to execute it.
-    </p>
+    <div id="grid">
+        <div>
+            <ol>
+                <li>
+                    <a href="html.html" title="html">
+                        html
+                    </a>
+                </li>
+                <li>
+                    <a href="css.html" title="css">
+                        css
+                    </a>
+                </li>
+                <li>
+                    <a href="javaScript.html" title="javaScript">
+                        javaScript
+                    </a>
+                </li>
+                <li>
+                    <a href="borderbox.html" title="borderbox">
+                        borderBox
+                    </a>
+                </li>
+                <li>
+                    <a href="grid.html" title="grid">
+                        grid
+                    </a>
+                </li>
+            </ol>
+        </div>
+        <div id="article">    
+            <h2>JAVASCRIPT</h2>
+            <p>
+                JavaScript,often abbreviated as JS, is a high-level, interpreted programming language. It is a language
+                which is also characterized as dynamic, weakly typed, prototype-based and multi-paradigm. Alongside HTML and CSS, JavaScript
+                is one of the three core technologies of the World Wide Web.JavaScript enables interactive web pages and thus is an essential
+                part of web applications. The vast majority of websites use it,and all major web browsers have a dedicated JavaScript
+                engine to execute it.
+            </p>
+        </div>
+    </div>
     <p>
         <div id="disqus_thread"></div>
         <script>

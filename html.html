@@ -3,39 +3,89 @@
 <head>
     <meta charset="utf-8" />
     <title>WEB1 - Practice</title>
+    <style>
+        body {
+            margin:0;
+        }
+        .active {
+            color: grey;
+        }
+        #personal {
+            color: red 
+        }
+        a {
+            color: black;
+            text-decoration:none;
+        }
+        h1 {
+            font-size:45px;
+            text-align:center;
+            border-bottom:1px solid grey;
+            margin:0;
+            padding:20px;
+        }
+        #grid ol{
+            border-right:1px solid grey;
+            width:100px;
+            margin:0;
+            padding:20px;
+            margin-left:5px;
+            padding-left:33px;
+        }
+        #grid{
+            display:grid;
+            grid-template-columns:150px 1fr;
+        }
+        #grid #article{
+            padding-left:33px
+        }
+    </style>
 </head>
 <body>
     <h1>
         <a href="index.html" title="WEB1">
-            <font color="red">WEB1</font>
+            WEB1
         </a>
     </h1>
-    <p>
-        <ol>
-            <li>
-                <a href="html.html" title="html">
-                    <font color="red">html</font>
-                </a>
-            </li>
-            <li>
-                <a href="css.html" title="css">
-                    <font color="red">css</font>
-                </a>
-            </li>
-            <li>
-                <a href="javaScript.html" title="javaScript">
-                    <font color="red">javaScript</font>
-                </a>
-            </li>
-        </ol>
-    </p>
-    <h2>HTML</h2>
-    <p>
-         Hypertext Markup Language (HTML) is the standard markup language for creating web pages and web applications. With Cascading
-        Style Sheets (CSS) and JavaScript, it forms a triad of cornerstone technologies for the World Wide Web.Web browsers receive
-        HTML documents from a web server or from local storage and render the documents into multimedia web pages. HTML describes
-        the structure of a web page semantically and originally included cues for the appearance of the document.
-    </p>
+    <div id="grid">
+        <div>
+            <ol>
+                <li>
+                    <a href="html.html" title="html">
+                        html
+                    </a>
+                </li>
+                <li>
+                    <a href="css.html" title="css">
+                        css
+                    </a>
+                </li>
+                <li>
+                    <a href="javaScript.html" title="javaScript">
+                        javaScript
+                    </a>
+                </li>
+                <li>
+                    <a href="borderbox.html" title="borderbox">
+                        borderBox
+                    </a>
+                </li>
+                <li>
+                    <a href="grid.html" title="grid">
+                        grid
+                    </a>
+                </li>
+            </ol>
+        </div>
+        <div id="article">
+            <h2>HTML</h2>
+            <p>
+                Hypertext Markup Language (HTML) is the standard markup language for creating web pages and web applications. With Cascading
+                Style Sheets (CSS) and JavaScript, it forms a triad of cornerstone technologies for the World Wide Web.Web browsers receive
+                HTML documents from a web server or from local storage and render the documents into multimedia web pages. HTML describes
+                the structure of a web page semantically and originally included cues for the appearance of the document.
+            </p>
+        </div>
     <p>
         <div id="disqus_thread"></div>
         <script>
