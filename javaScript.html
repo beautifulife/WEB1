@@ -4,29 +4,40 @@
     <meta charset="utf-8" />
     <title>WEB1 - Practice</title>
     <link rel="stylesheet" type="text/css" href="style.css">
+    <script>
+        function nightDayHandler(self){
+            if(self.value ==='night'){
+                document.querySelector('body').style.backgroundColor='black';
+                document.querySelector('body').style.color='white';
+                self.value='day';
+
+                var link = document.querySelectorAll('a');
+                var i = 0;
+                while(i<link.length){
+                    link[i].style.color='white';
+                    i = i+1;
+                }
+            } else {
+                document.querySelector('body').style.backgroundColor='white';
+                document.querySelector('body').style.color='black';
+                self.value='night';
+
+                var link = document.querySelectorAll('a');
+                var i = 0;
+                while(i<link.length){
+                    link[i].style.color='black';
+                    i = i+1;
+                }
+            }
+        }
+    </script>
 </head>
 <body>
     <h1>
         <a href="index.html" title="WEB1">
             WEB1
         </a>
-        <div>
-            <input type="button" value="night" onclick="
-                if(this.value ==='night'){
-                    document.querySelector('body').style.backgroundColor='black';
-                    document.querySelector('body').style.color='white';
-                    document.querySelector('#grid').style.color='white';
-                    document.querySelector('a').style.color='white';
-                    this.value='day';
-                } else {
-                    document.querySelector('body').style.backgroundColor='white';
-                    document.querySelector('body').style.color='black';
-                    document.querySelector('#grid').style.color='black';
-                    document.querySelector('a').style.color='black';
-                    this.value='night';
-                }
-            ">
-        </div>
+        <input type="button" value="night" onclick="nightDayHandler(this);">
     </h1>
     <div id="grid">
         <div>
