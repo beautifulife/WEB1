@@ -5,28 +5,36 @@
     <title>WEB1 - Practice</title>
     <link rel="stylesheet" type="text/css" href="style.css">
     <script>
-        function nightDayHandler(self){
-            if(self.value ==='night'){
-                document.querySelector('body').style.backgroundColor='black';
-                document.querySelector('body').style.color='white';
-                self.value='day';
+        var Handler = {
+            setBackGroundColor : function(self){
+                document.querySelector('body').style.backgroundColor = self;
+            },
+            setColor : function(self){
+                document.querySelector('body').style.color = self;
+            },
+            nightDayHandler : function(self){
+                if (self.value === 'night') {
+                    Handler.setBackGroundColor('black');
+                    Handler.setColor('white');
+                    self.value = 'day';
 
-                var link = document.querySelectorAll('a');
-                var i = 0;
-                while(i<link.length){
-                    link[i].style.color='white';
-                    i = i+1;
-                }
-            } else {
-                document.querySelector('body').style.backgroundColor='white';
-                document.querySelector('body').style.color='black';
-                self.value='night';
+                    var link = document.querySelectorAll('a');
+                    var i = 0;
+                    while (i < link.length) {
+                        link[i].style.color = 'white';
+                        i = i + 1;
+                    }
+                } else {
+                    Handler.setBackGroundColor('white');
+                    Handler.setColor('black');
+                    self.value = 'night';
 
-                var link = document.querySelectorAll('a');
-                var i = 0;
-                while(i<link.length){
-                    link[i].style.color='black';
-                    i = i+1;
+                    var link = document.querySelectorAll('a');
+                    var i = 0;
+                    while (i < link.length) {
+                        link[i].style.color = 'black';
+                        i = i + 1;
+                    }
                 }
             }
         }
@@ -37,7 +45,7 @@
         <a href="index.html" title="WEB1">
             WEB1
         </a>
-        <input type="button" value="night" onclick="nightDayHandler(this);">
+        <input type="button" value="night" onclick="Handler.nightDayHandler(this);">
     </h1>
     <div id="grid">
         <div>
